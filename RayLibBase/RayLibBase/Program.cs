@@ -1,5 +1,6 @@
 ﻿using Raylib_cs;
 using RayLibBase.GameplayLoop;
+using RayLibBase.UI;
 
 namespace RayLibBase;
 
@@ -60,9 +61,7 @@ internal class Program
 
             if (exitWindowRequested)
             {
-                Raylib.DrawRectangle(0, 100, settings.Width, 200, Color.Black);
-                Raylib.DrawText("Do you really want to exit?", 40, 180, 30, Color.White);
-                Raylib.DrawText("Press Y to confirm or N to cancel", 120, 200, 20, Color.LightGray);
+                ExitWindow.Draw(settings.Width);
             }
             else
             {

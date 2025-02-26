@@ -1,4 +1,4 @@
-﻿using Raylib_cs;
+﻿using RayLibBase.Graphics;
 
 namespace RayLibBase.GameplayLoop;
 
@@ -23,11 +23,7 @@ internal class LogoPhase : IGamePhase
 
     public void Draw()
     {
-        Raylib.ClearBackground(Color.RayWhite);
-
-        Raylib.DrawRectangle(settings.Width / 2 - 128, settings.Height / 2 - 128, 256, 256, Color.Black);
-        Raylib.DrawRectangle(settings.Width / 2 - 112, settings.Height / 2 - 112, 224, 224, Color.RayWhite);
-        Raylib.DrawText("raylib", settings.Width / 2 - 44, settings.Height / 2 + 48, 50, Color.Black);
+        RaylibLogoRenderer.DrawLogo(settings.Width, settings.Height);
     }
 
     public void Unload()
